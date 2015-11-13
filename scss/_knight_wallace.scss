@@ -13,7 +13,7 @@
         }
 
         &:hover {
-            color: $color; 
+            color: $hover; 
         }
     }
 }
@@ -83,6 +83,13 @@ a {
 
     .sub-nav-wrap {
         background: $white-gray; 
-        @include link_style($charcoal,$charcoal);         
+        @include link_style($lblue,$charcoal);         
+        text-align: center;
+        font-size: 2rem;
+
+        li {
+            font-size: 2rem;
+            margin: 1rem 2rem 0 2rem;
+        }
     }
 }
