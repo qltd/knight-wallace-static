@@ -4,6 +4,85 @@
  *
  */
 
+@mixin link_style($color, $hover){
+    a {
+        color: $color; 
+
+        &:link, &:visited {
+            color: $color; 
+        }
+
+        &:hover {
+            color: $color; 
+        }
+    }
+}
+
 html {
     font-size: 62.5%;
+}
+
+body {
+    color: $charcoal;
+}
+
+a {
+    color: $lblue;
+    transition: all 0.5s ease;
+
+    &:link, &:visited {
+        color: $lblue;
+    }
+
+    &:hover {
+        color: $ublue; 
+    }
+}
+
+.row {
+    max-width:128.0rem;
+}
+
+#header {
+    background: $ublue;
+    color: $white;
+    padding: 2rem;
+
+    h1, h2 {
+        color: $white; 
+    }
+}
+
+#main_nav {
+    background: $charcoal;
+    color: $white-gray;
+
+    li {
+        display: inline-block; 
+    }
+
+    .primary {
+        @include link_style($white-gray,$charcoal);         
+        text-align: center;
+        text-transform: uppercase;
+        transition: all 0.5s ease;
+        margin-bottom: 0;
+        font-size: 2rem;
+
+        a {
+            display: inline-block;
+            padding: 2rem; 
+            width:100%;
+        }
+
+        &:hover {
+            background: $white-gray; 
+            @include link_style($charcoal,$charcoal);         
+        }
+    }
+
+    .sub-nav-wrap {
+        background: $white-gray; 
+        @include link_style($charcoal,$charcoal);         
+    }
 }
