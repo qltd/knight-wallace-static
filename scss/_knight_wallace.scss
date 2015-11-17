@@ -6,14 +6,14 @@
 
 @mixin link_style($color, $hover){
     a {
-        color: $color; 
+        color: $color;
 
         &:link, &:visited {
-            color: $color; 
+            color: $color;
         }
 
         &:hover {
-            color: $hover; 
+            color: $hover;
         }
     }
 }
@@ -35,12 +35,13 @@ a {
     }
 
     &:hover {
-        color: $ublue; 
+        color: $ublue;
     }
 }
 
 .row {
     max-width:128.0rem;
+
 }
 
 #header {
@@ -49,8 +50,24 @@ a {
     padding: 2rem;
 
     h1, h2 {
-        color: $white; 
+        color: $white;
     }
+}
+
+#eyebrow {
+    ul {
+         float: right;
+         li {
+            float: left;
+            list-style: none;
+            a {
+                color: $white;
+                font-size: 1.4rem;
+                padding: 2px 5px 2px 8px;
+            }
+        }
+    }
+
 }
 
 #main_nav {
@@ -58,11 +75,11 @@ a {
     color: $white-gray;
 
     li {
-        display: inline-block; 
+        display: inline-block;
     }
 
     .primary {
-        @include link_style($white-gray,$charcoal);         
+        @include link_style($white-gray,$charcoal);
         text-align: center;
         text-transform: uppercase;
         transition: all 0.5s ease;
@@ -71,19 +88,19 @@ a {
 
         a {
             display: inline-block;
-            padding: 2rem; 
+            padding: 2rem;
             width:100%;
         }
 
         &:hover {
-            background: $white-gray; 
-            @include link_style($charcoal,$charcoal);         
+            background: $white-gray;
+            @include link_style($charcoal,$ublue);
         }
     }
 
     .sub-nav-wrap {
-        background: $white-gray; 
-        @include link_style($lblue,$charcoal);         
+        background: $white-gray;
+        @include link_style($lblue,$charcoal);
         text-align: center;
         font-size: 2rem;
 
@@ -91,5 +108,41 @@ a {
             font-size: 2rem;
             margin: 1rem 2rem 0 2rem;
         }
+    }
+}
+
+/* Hero Unit */
+#hero_image {
+    background: url(http://lorempixel.com/output/city-q-c-1920-1920-3.jpg) no-repeat center center;
+    background-size: cover;
+    color: $white;
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .columns {
+        background: rgba($charcoal, 0.7);
+        margin: 0 auto;
+        float: none;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    h2 { color: $myellow; font-size: 2.6rem; font-weight: normal; margin-bottom: 0; }
+    p { font-size: 2.6rem; line-height: 1.2; }
+}
+
+/* Home Page Posts */
+#main.posts {
+    margin-top: 5rem;
+    .columns {
+        width: 50%;
+        color: $white;
+        margin-bottom: 2rem;
+        img { width: 100%; height: auto; }
+        .text {  background: $lblue;  padding: 1.5rem 3rem 1rem; }
+        h3 { color: $white; font-weight: bold; font-size: 2rem;  }
+        a { color: $white; font-size: 1.6rem; display: inline-block; }
     }
 }
