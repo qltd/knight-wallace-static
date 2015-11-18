@@ -18,6 +18,8 @@
     }
 }
 
+.disappear {display:none;}
+
 html {
     font-size: 62.5%;
 }
@@ -92,7 +94,7 @@ a {
             width:100%;
         }
 
-        &:hover {
+        &:hover, &.active {
             background: $white-gray;
             @include link_style($charcoal,$ublue);
         }
@@ -109,6 +111,7 @@ a {
             margin: 1rem 2rem 0 2rem;
         }
     }
+
 }
 
 /* Hero Unit */
