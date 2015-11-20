@@ -132,20 +132,61 @@ a {
         text-align: center;
     }
 
-    h2 { color: $myellow; font-size: 2.6rem; font-weight: normal; margin-bottom: 0; }
-    p { font-size: 2.6rem; line-height: 1.2; }
+    h2 { 
+        color: $myellow; 
+        font-size: 2.6rem; 
+        font-weight: normal; 
+        margin-bottom: 0; 
+    }
+
+    p { 
+        font-size: 2.6rem; 
+        line-height: 1.2; 
+    }
 }
 
 /* Home Page Posts */
 #main.posts {
     margin-top: 5rem;
+
     .columns {
-        width: 50%;
         color: $white;
         margin-bottom: 2rem;
-        img { width: 100%; height: auto; }
-        .text {  background: $lblue;  padding: 1.5rem 3rem 1rem; }
-        h3 { color: $white; font-weight: bold; font-size: 2rem;  }
-        a { color: $white; font-size: 1.6rem; display: inline-block; }
+
+        img { 
+            width: 100%; 
+            height: auto; 
+        }
+
+        h3 { 
+            color: $white; 
+            font-weight: bold; 
+            font-size: 2rem;  
+        }
+
+        a { 
+            color: $white; 
+            font-size: 1.6rem; 
+            display: inline-block; 
+        }
+        
+        .text {  
+            background: $lblue;  
+            padding: 1.5rem 3rem 1rem; 
+            transition: all 0.5s ease;
+
+            &:hover {
+                background: $ublue; 
+            }
+        }
+    }
+}
+
+.alert {
+    background: $white-gray;
+
+    .large-4 {
+        background: $red; 
+        color: $white;
     }
 }
