@@ -184,9 +184,34 @@ a {
 
 .alert {
     background: $white-gray;
+    margin-bottom: 2rem;
 
     .large-4 {
         background: $red; 
         color: $white;
+        font-size: 1.4rem;
+        text-align: center;
+        text-transform: uppercase;
+        padding:2rem;
+
+        strong {
+            font-size: 1.8rem;
+        }
     }
+
+    .large-8 {
+        font-size: 1.8rem; 
+        padding: 2rem;
+
+        @include link_style($red,lighten($red, 10%));
+
+        a {
+            font-size: 2.4rem;  
+            margin-right: 2rem;
+        }
+
+        p {
+            font-size: 1.8rem; 
+        }
+    } 
 }
