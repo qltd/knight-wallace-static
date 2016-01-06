@@ -3,7 +3,9 @@
 $(document).foundation();
 
 $(document).ready(function(){
-    var active_menu;
+
+    //grab original active menu
+    var active_menu = $('.primary.active').attr('data-sub-nav-menu');
 
     $('#main_nav .primary').hover(function(){
         //on mouse in
@@ -18,15 +20,15 @@ $(document).ready(function(){
         $('.sub-nav-wrap ul').addClass('disappear');
         $('.sub-nav-wrap .'+menu).removeClass('disappear');
     });
-
-    $('#main_nav').hover(function(active_menu){
+    
+    $('#main_nav').hover(function(){
         //on mouse in 
-        //grab original active menu 
-        active_menu = $(this).attr('data-sub-nav-menu');
-    },function(active_menu){
+    },function(){
         //on mouse out 
         $('#main_nav .primary').removeClass('active'); 
-        $('#main_nav .primary'+active_menu).addClass('active');
+        $('#main_nav .primary.'+active_menu).addClass('active');
+        $('.sub-nav-wrap ul').addClass('disappear');
+        $('.sub-nav-wrap .'+active_menu).removeClass('disappear');
     });
 
 });
